@@ -2,9 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages 
 
-def homepage(request):
-    return render(request, 'homepage.html')
-
 def login_view(request):
     if request.method == "POST":
         username = request.POST.get('username')
